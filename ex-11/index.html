@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let username = window.prompt('Please input your username');
+        let password = window.prompt('Please input your password');
+
+       function message(n1) {
+            alert(`Welcome ${username}`)
+            n1();
+        }
+        const n2 = function () {
+            setTimeout(() => {
+                status = window.confirm("Do you still want to be logged?")
+                if (status == true) {
+                    alert(`${username} your session has been restored`)
+                } else {
+                    alert(`${username} your session has expired`)
+                }
+            }, 10000);
+        }
+        message(n2);
+        console.log(`password: ${password} has been here stored`)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
