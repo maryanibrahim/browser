@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        alert('input a complete URL')
+        
+        function fun() { 
+    var url= document.getElementById("url").value; 
+    document.write("Redirecting to the url in 3 seconds..."); 
+    setTimeout(function(){window.location = url;}, 3000); 
+} 
+</script>
+</head>
+<body>
+        <input id = "url" type = "text" name = "url" 
+        placeholder = "Enter a url here"> 
+<input type = "submit" name = "button" onclick = "fun()">  
+</body>
+</html>
