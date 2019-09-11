@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+
+    <script>
+ window.onload = function () {
+            const firstButton = document.querySelector('button');
+            const secondButton = document.getElementById('secondButton');
+            const link = document.querySelector('a');
+            function greeting() {
+                alert("You clicked an event listened element")
+            };
+            firstButton.addEventListener('click', greeting);
+            secondButton.addEventListener('click', function () {
+                firstButton.removeEventListener('click', greeting);
+            });
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                alert("This link doesn't send us to a differen page as we're preventing the default behaviour");
+            });
+        };
+
+
+            function showCoords(event) {
+              var x = event.clientX;
+              var y = event.clientY;
+              var coords = "x-axis: " + x + ", y-axis: " + y;
+
+              document.getElementById("body").innerHTML = coords;
+            }
+            </script>
+    
+
+</head>
+
+<body>
+        <h2 onclick="showCoords(event)">Click here</h2>
+
+        <p id="body"></p>
+
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+
+    
+</body>
+
+</html>
