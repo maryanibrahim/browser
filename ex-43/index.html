@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <head>
+
+    <script>
+    const form = document.querySelector('form');
+    console.log(form.action);
+    console.log(form.encoding);
+    console.log(form.method);
+    console.log(form.name);
+    const username = form.elements[0].value;
+
+    username.value; 
+    username.value = 'Pepe';
+    </script>
+        
+  </head>
+  <title>Form Properties</title>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>
